@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // console.log("hello world")
+        // alert("hello world")
+        // document.write("hello world")
+    //     var a=20;
+    // console.log(a)
+
+//   Q.1 print the largest element witout using any logical operators (solve by nested loop)
+    // let a =10;
+    // let b=5; 
+    // let c=20;
+    // let d=80;
+
+
+//   Q.2 write a javascript program to print the table.
+
+    // let a=2;
+
+    // for(let i=1;i<=10;i++){
+    //     console.log(`${a}*${i}=${a*i}`)
+    // }
+
+
+//   Q.3 write a javscript program to print sum of digits. 
+
+//  let num= prompt("enter the number :");
+//  console.log(num)
+//  sum=0;
+
+// while(num>0)
+// {
+//     sum=sum+num%10;;
+//     num=Math.floor(num/10);
+    
+// }
+// console.log(sum)
+
+
+//   Q.4 write a  javascript program to print the pallindrome number from 1 to n.
+
+   let start = prompt("enter the number :");
+   let end = prompt("enter the number :");
+   for(let i=start; i<end; i++){
+    let num=i;
+    let sum =0;
+    let temp = num;
+   while(num>0)
+    {
+    let rem=num%10;
+    sum=sum*10+rem;
+    num=parseInt(num/10);
+    }
+   if(temp==sum){
+    console.log(temp);
+   }
+}
+   
+// let n=prompt("Enter no");
+//         for(let i=1;i<n;i++){
+//         let num=i;
+//         let sum=0;
+//         let temp=num;
+//         while(num>0){
+//            let rem=num%10;
+//            sum=sum*10+rem;
+//            num=parseInt(num/10);
+//         }
+//         if(temp==sum){
+//         console.log(temp);
+//         }
+//     }
+    </script>
+</body>
+</html>
