@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #r{
+           height: 50px;
+           width: 50px;
+           border: 2px;
+           border-radius: 100px;
+          display: inline-block;
+           background-color: red;
+        }
+        #y{
+           height: 50px;
+           border: 2px;
+           border-radius: 50px;
+           display: inline-block;
+           width: 50px;
+           background-color: yellow;
+        }
+        #p{
+           height: 50px;
+           border: 2px;
+           border-radius: 50px;
+           display: inline-block;
+           width: 50px;
+           background-color: pink;
+        }
+        #b{
+           height: 50px;
+           border: 2px;
+           border-radius: 50px;
+           display: inline-block;
+           width:  50px;
+           background-color: blue;
+        }
+    </style> 
+    
+</head>
+<body>
+    
+    <h1 id="h">This is my heading tag</h1>
+    <div id="r"></div>
+    <div id="y"></div>
+    <div id="p"></div>
+    <div id="b"></div>
+    
+
+    <script>
+        document.getElementById("r").onclick = function()
+        {
+            document.getElementById("h").style.backgroundColor ="blue"
+            document.getElementById("h").style.color="red"
+        }
+        document.getElementById("y").onclick = function()
+        {
+            document.getElementById("h").style.backgroundColor ="black"
+            document.getElementById("h").style.color="yellow"
+        }
+        document.getElementById("p").onclick = function()
+        {
+            document.getElementById("h").style.backgroundColor ="green"
+            document.getElementById("h").style.color="pink"
+        }
+        document.getElementById("b").onclick = function()
+        {
+            document.getElementById("h").style.backgroundColor ="orange"
+            document.getElementById("h").style.color="blue"
+        }
+        
+    </script>
+</body>
+</html>
