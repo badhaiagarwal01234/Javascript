@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   Name : <input type="text"  placeholder="enter your username"  class="a">
+   <br> <br>
+   Email : <input type="email" placeholder="enter your email" class="a">
+   <br><br>
+   Mobile : <input type="number" placeholder="enter your mobile number" class="a">
+   <br><br>
+   Password : <input type="password" placeholder="enter your password" class="a">
+   <br><br>
+   <button id="btn">Submit</button>
+
+   <script>
+
+            document.getElementById('btn').onclick = function(){
+
+                let val = document.getElementsByClassName('a');
+
+                for(let i of val){
+                    console.log(i.value)
+                }
+
+                // for(let i in val){
+                //     console.log(val[i].value)
+                // }
+
+                // for(let i=0; i < val.length; i++){
+                //     console.log(val[i].value);
+                }
+            
+
+   </script>
+</body>
+</html>
