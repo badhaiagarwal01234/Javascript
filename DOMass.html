@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        height: 80vh;
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    *{
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+    #box{
+          /* height: 200px; */
+          width: 500px;
+          /* border: 1px solid red; */
+          background-color: white;
+          border-radius: 10px;
+         
+    }
+    .A{
+        margin: 25px;
+        font-family: sans-serif;
+        font-weight: 500;
+    }
+    #sel{
+        margin-left: 25px;
+        padding: 5px;
+        padding-right: 150px;
+        border: 1.5px solid black;
+        border-radius: 4px;
+    }
+    #red{
+        height: 40px;
+        width: 40px;
+        border-radius: 50px;
+        background-color: red;
+        display: inline-block;
+        margin-left: 20px;
+        margin-top: 20px;
+        
+    }
+    #yellow{
+        height: 40px;
+        width: 40px;
+        border-radius: 50px;
+        background-color: yellow;
+        display: inline-block;
+    }
+    #green{
+        height: 40px;
+        width: 40px;
+        border-radius: 50px;
+        background-color: green;
+        display: inline-block;
+    }
+    #blue{
+        height: 40px;
+        width: 40px;
+        border-radius: 50px;
+        background-color:blue;
+        display: inline-block;
+    }
+    #black{
+        height: 40px;
+        width: 40px;
+        border-radius: 50px;
+        background-color: black;
+        display: inline-block;
+    }
+    button{
+        color: white;
+        background-color: green;
+        border-radius: 3px;
+        border: none;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        margin-bottom: 30px;
+    }
+    #upper{
+        margin-left: 25px;
+        margin-top: 20px;
+        padding: 5px;
+    }
+    #lower{
+        padding: 5px;
+    }
+    #plus{
+        padding: 5px 10px;
+    }
+    #minus{
+        padding: 5px 12px;
+    }
+    #paragraph{
+        margin-left: 25px;
+        margin-right: 25px;
+        margin-top: 20px;
+        text-align: justify;
+    }
+</style>
+<body id="bod">
+    <div id="box">
+        <p class="A" id="h">Select Your Domain:</p>
+    
+        <select name="" id="sel">
+        <option value="">--Make a Choice--</option>
+        <option value="angular">Angular</option>
+        <option value="react">React</option>
+        <option value="aws">AWS</option>
+        <option value="django">Django</option>
+        </select><br>
+
+        <div id="paragraph"></div>
+
+        <div id="red"></div>
+        <div id="yellow"></div>
+        <div id="green"></div>
+        <div id="blue"></div>
+        <div id="black"></div>
+        <br>
+
+        <button id="upper">Upper</button>
+        <button id="lower">Lower</button>
+        <button id="plus">+</button>
+        <button id="minus">-</button>
+    </div>
+
+<script>
+
+            document.getElementById('sel').addEventListener('click', function() {
+            var selectedValue = this.value;
+            var paragraph = document.getElementById('paragraph');
+            
+
+            if (selectedValue === 'angular') {
+                paragraph.innerHTML = '<p>Angular is an open-source, JavaScript framework written in TypeScript. Google maintains it, and its primary purpose is to develop single-page applications. As a framework, Angular has clear advantages while also providing a standard structure for developers to work with.</p>';
+            } else if (selectedValue === 'react') {
+                paragraph.innerHTML = '<p>React is a JavaScript-based UI development library. Although React is a library rather than a language, it is widely used in web development. The library first appeared in May 2013 and is now one of the most commonly used frontend libraries for web development.</p>';
+            } else if (selectedValue === 'aws') {
+                paragraph.innerHTML = '<p>Amazon Web Services (AWS) is a leading top platform in providing the web services of various domains. AWS follows the trends of digital IT and comes up needy services with optimized performances covering a wide range of services from Compute to Storage. It covers a wider range of customers of different domains to expand their business operations. This Article covers the fundamentals of AWS and its scope of IT business.</p>';
+            } else if (selectedValue === 'django') {
+                 paragraph.innerHTML = '<p>The Django web framework is a free, open source framework that can speed up development of a web application being built in the Python programming language. Django—pronounced “Jango,” named after the famous jazz guitarist Django Reinhardt—is a free, open source framework that was first publicly released in 2005.</p>';
+            } else if (selectedValue === 'none') {
+                paragraph.innerHTML = ' '
+            }  
+
+        });
+
+            let counter=16;
+
+            document.getElementById("plus").onclick = function(){
+                
+                document.getElementById("paragraph").style.fontSize = counter +"px";
+                counter++;
+            }
+
+            document.getElementById("minus").onclick = function(){
+                
+                document.getElementById("paragraph").style.fontSize = counter +"px";
+                counter--;
+            }
+
+            document.getElementById("upper").onclick = function(){
+                document.getElementById("paragraph").innerHTML = paragraph.innerHTML.toUpperCase();
+            }
+
+            document.getElementById("lower").onclick = function(){
+                document.getElementById("paragraph").innerHTML = paragraph.innerHTML.toLowerCase();
+            }
+        
+        document.getElementById("red").onclick = function(){
+            document.getElementById("bod").style.backgroundColor = "red";
+        } 
+
+        document.getElementById("yellow").onclick = function(){
+            document.getElementById("bod").style.backgroundColor = "yellow";
+        } 
+
+        document.getElementById("green").onclick = function(){
+            document.getElementById("bod").style.backgroundColor = "green";
+        } 
+
+        document.getElementById("blue").onclick = function(){
+            document.getElementById("bod").style.backgroundColor = "blue";
+        } 
+
+        document.getElementById("black").onclick = function(){
+            document.getElementById("bod").style.backgroundColor = "black";
+        } 
+
+
+</script>        
+   
+</body>
+</html>
