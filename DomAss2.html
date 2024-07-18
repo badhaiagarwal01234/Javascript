@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    
+</head>
+
+<body>
+
+    <input type="text" placeholder="enter the first value" id="a">
+    <input type="text" placeholder="enter the second value" id="b">
+
+    <select name="" id="operation">
+        <option value="">--select one--</option>
+        <option value="add">Add</option>
+        <option value="minus">Minus</option>
+        <option value="multiply">Multiply</option>
+        <option value="divide">Divide</option>
+    </select>
+    
+
+    <!-- <button id="multi">multiply</button>
+    <button id="add">add</button> -->
+    <h1>Result : </h1>
+    
+    <h1 id="result"></h1>
+    
+   
+    <script>
+
+        // function operationCal() {
+
+        //     let num1 = parseFloat(document.getElementById("a").value)
+        //     let num2 = parseFloat(document.getElementById("b").value)
+        //     let operation = document.getElementById("operation").value;
+        //     let result;
+        //     if (operation === "add") {
+        //         result = num1 + num2;
+        //         document.getElementById("result").innerHTML= result;
+        //     }
+        //     else if (operation === "minus") {
+        //         result = num1 - num2;
+        //         document.getElementById("result").innerHTML= result;
+        //     }
+        //     else if (operation === "multiply") {
+        //         result = num1 * num2;
+        //         document.getElementById("result").innerHTML=  result;
+        //     }
+        //     else if (operation === "divide") {
+        //         result = num1 / num2;
+        //         document.getElementById("result").innerHTML= result;
+        //     }
+        //     else{
+        //         result = ""
+        //     }
+
+        // }
+        
+
+        document.getElementById('operation').onclick = function(){
+           let val = document.getElementById('operation').value;
+            let a = Number(document.getElementById('a').value);
+            let b = Number(document.getElementById('b').value);
+            let result;
+            if(val == 'add'){
+                result = a+b;
+                document.getElementById('result').innerHTML = result;
+            }
+            else if(val == 'minus'){
+                result = a-b;
+                document.getElementById('result').innerHTML = result;
+            }
+            else if(val == 'multiply'){
+                result = a*b;
+                document.getElementById('result').innerHTML = result;
+            }
+            else if(val == 'divide'){
+                result = a/b;
+                document.getElementById('result').innerHTML = result;
+            }
+
+        }
+
+
+    </script>
+
+</body>
+
+</html>
