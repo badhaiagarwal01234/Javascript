@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container{
+             height: 500px;
+             width: 400px;
+             border: 2px solid black;
+             border-radius: 10px;
+             display: grid;
+             grid-template-rows: 2fr 1fr 1fr 1fr 1fr 1fr;
+             background-color: black;
+        }
+        .box{
+             /* border: 1px solid black; */
+             border-radius: 5px;
+             
+        }
+        #box-item{
+             margin: 10px 10px 2px 10px;
+             border: 1px solid black ;
+             background-color: white;
+             font-size: 30px;
+        }
+        #box-item2{
+            display: grid;
+            grid-template-columns: 2fr 2fr;
+            
+        }
+        .box2{
+            border: 1px solid black;
+            border-radius: 5px;
+            margin: 10px 10px 2px 10px;
+            background-color: white;
+            font-family: sans-serif;
+            
+        }
+        .box2:hover{
+            background-color: gold;
+        }
+        #box-item3{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+        .box3{
+            border: 1px solid black;
+            margin: 10px;
+            border-radius: 5px;
+            background-color: white;
+        }
+        .box3:hover{
+            background-color: rgb(205, 204, 204);
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <input type="text"  class="box" id="box-item">
+        
+        <div class="box" id="box-item2">
+            <button class="box2">CLEAR</button>
+            <button class="box2">DELETE</button>
+        </div>
+        <div class="box" id="box-item3">
+            <button class="box3">7</button>
+            <button class="box3">8</button>
+            <button class="box3">9</button>
+            <button class="box3">/</button>
+        </div>
+        <div class="box" id="box-item3">
+            <button class="box3">4</button>
+            <button class="box3">5</button>
+            <button class="box3">6</button>
+            <button class="box3">*</button>
+        </div>
+        <div class="box" id="box-item3">
+            <button class="box3">1</button>
+            <button class="box3">2</button>
+            <button class="box3">3</button>
+            <button class="box3">-</button>
+        </div>
+        <div class="box" id="box-item3">
+            <button class="box3">.</button>
+            <button class="box3">0</button>
+            <button class="box3">=</button>
+            <button class="box3">+</button>
+        </div>    
+            
+    </div>
+    
+    <script>
+        let a = document.querySelectorAll("button");
+
+        let inp = document.querySelector("input");
+         
+        
+        for(let i of a){
+
+            i.onclick = function(){
+
+                if(i.innerText == "="){
+                    let val = inp.value;
+                    inp.value = eval(val);
+                }
+                else if(i.innerText == "CLEAR"){
+                    inp.value = " ";
+                }
+                else if(i.innerText == "DELETE"){
+                    inp.value = inp.value.slice(0,-1);
+                }
+                else{
+                    
+                    inp.value += i.innerText;
+                }
+                
+            }
+            
+        }
+        
+    </script>
+</body>
+</html>
