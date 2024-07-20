@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <input type="text">
+    <button id="submit">Submit</button>
+    <button id="print">Print</button>
+
+
+    <script>
+        // let a = 10;
+        // console.log(`my age is ${a}`)
+        //-----------------------------------------------------------------------------------------------------------------------
+
+        // let i=1;
+        // setInterval(function(){
+            
+        //     if(i == "6"){
+        //         clearInterval();
+        //     }
+        //     else{
+        //         document.write(i);
+        //         i++;
+        //     }
+        // },1000)
+
+        //---------------------------------------------------------------------------------------------------------
+        
+        // let a = 1
+        // let i = 4
+        // setInterval(()=>{
+
+        //     if(a == "11")
+        // {
+        //     clearInterval()
+        // }
+        //     else{
+
+        //         document.write(`${i} * ${a} = ${i*a}  <br>` )
+        //         a++;
+        //     }
+        // },1000)
+
+        //----------------------------------------------------------------------------------------------------------
+
+
+        // setTimeout(()=>{
+        //     console.log("hello")
+        // },5000)
+
+        //-----------------------------------------------------------------------------------------------------------
+
+        let arr = [];
+
+        document.getElementById("submit").onclick = function(){
+            let val = document.querySelector("input").value
+            document.querySelector("input").value = " "
+            document.querySelector("input").focus()
+            arr.push(val)
+
+        }
+
+        document.getElementById("print").onclick = function(){
+            console.log(arr)
+        }
+
+    </script>
+</body>
+</html>
