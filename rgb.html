@@ -15,22 +15,27 @@
 </head>
 <body id="bod">
     <input type="text" placeholder="values">
-    <button>click me!</button>
+    <button id="disco">click me!</button>
+    <button id="stop">stop!</button>
 
     <script>
-        document.querySelector("button").onclick = function(){
+         document.getElementById("disco").onclick = function(){
             
-            let color = `rgb(${Math.floor(Math.random()*255)},${Math.floor(Math.random()*255)},${Math.floor(Math.random()*255)})`
-            
-            
+           
             setInterval(()=>{
+                
+                let color = `rgb(${Math.floor(Math.random()*255)},${Math.floor(Math.random()*255)},${Math.floor(Math.random()*255)})`
                 document.querySelector("input").value = color;
                 document.getElementById("bod").style.backgroundColor = color;
-
-            },2000)
-
+                
+                },100)
+                
+            }
+        document.getElementById("stop").onclick=function(){
+            window.location.reload();
+        }    
             
-        }
+            
 
     </script>
 </body>
