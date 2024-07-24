@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- <h1 id="h">This is My Range</h1>
+
+    <input type="range" id="input"> -->
+    
+
+    <input type="text" placeholder="Enter Your's Friends Name">
+    <button id="add">Push</button>
+    <button id="print">Pop</button>
+    <button id="length">get length</button>
+    <p id="ouput"></p>
+    <p id="len"></p>
+
+    <script>
+
+        // document.getElementById("input").oninput=function()
+        // {
+        //     let val =document.getElementById("input").value
+        //     document.getElementById("h").style.fontSize= val+"px";
+        // }
+
+
+
+
+        let arr = [];
+        document.getElementById("add").onclick = function(){
+
+            let val = document.querySelector("input").value;
+            document.querySelector("input").value = "";
+            document.querySelector("input").focus();
+            arr.push(val)
+            
+            document.getElementById("print").onclick = function(){
+                setInterval(()=>{
+
+                    let valu = arr.pop()
+                    document.querySelector("#ouput").innerHTML += valu + " "
+
+                },2000)
+                   
+                }
+                
+                document.getElementById("length").onclick = function(){      
+                 
+                    document.querySelector("#len").innerHTML = arr.length
+            }
+        }
+
+    </script>
+</body>
+</html>
