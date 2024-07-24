@@ -111,13 +111,14 @@
     
         <select name="" id="sel">
         <option value="">--Make a Choice--</option>
+        <option value="none">None</option>
         <option value="angular">Angular</option>
         <option value="react">React</option>
         <option value="aws">AWS</option>
         <option value="django">Django</option>
         </select><br>
 
-        <div id="paragraph"></div>
+        
 
         <div id="red"></div>
         <div id="yellow"></div>
@@ -125,6 +126,8 @@
         <div id="blue"></div>
         <div id="black"></div>
         <br>
+
+        <div id="paragraph"></div>
 
         <button id="upper">Upper</button>
         <button id="lower">Lower</button>
@@ -134,13 +137,15 @@
 
 <script>
 
-            document.getElementById('sel').addEventListener('click', function() {
-            var selectedValue = this.value;
+            document.getElementById('sel').oninput = function() {
+
+                let selectedValue = document.getElementById('sel').value
+            
             var paragraph = document.getElementById('paragraph');
             
 
             if (selectedValue === 'angular') {
-                paragraph.innerHTML = '<p>Angular is an open-source, JavaScript framework written in TypeScript. Google maintains it, and its primary purpose is to develop single-page applications. As a framework, Angular has clear advantages while also providing a standard structure for developers to work with.</p>';
+                paragraph.innerHTML = 'Angular is an open-source, JavaScript framework written in TypeScript. Google maintains it, and its primary purpose is to develop single-page applications. As a framework, Angular has clear advantages while also providing a standard structure for developers to work with.';
             } else if (selectedValue === 'react') {
                 paragraph.innerHTML = '<p>React is a JavaScript-based UI development library. Although React is a library rather than a language, it is widely used in web development. The library first appeared in May 2013 and is now one of the most commonly used frontend libraries for web development.</p>';
             } else if (selectedValue === 'aws') {
@@ -151,7 +156,7 @@
                 paragraph.innerHTML = ' '
             }  
 
-        });
+        };
 
             let counter=16;
 
