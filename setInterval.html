@@ -11,7 +11,7 @@
     <input type="text">
     <button id="submit">Submit</button>
     <button id="print">Print</button>
-
+    <p id="show"></p>
 
     <script>
         // let a = 10;
@@ -21,7 +21,7 @@
         // let i=1;
         // setInterval(function(){
             
-        //     if(i == "6"){
+        //     if(i == 6){
         //         clearInterval();
         //     }
         //     else{
@@ -34,11 +34,11 @@
         
         // let a = 1
         // let i = 4
-        // setInterval(()=>{
+        // let a = setInterval(()=>{
 
-        //     if(a == "11")
+        //     if(a == 11)
         // {
-        //     clearInterval()
+        //     clearInterval(a)
         // }
         //     else{
 
@@ -65,10 +65,19 @@
             arr.push(val)
 
         }
-
+        let index = 0;
         document.getElementById("print").onclick = function(){
-            console.log(arr)
-        }
+
+        setInterval(()=>{
+
+                console.log(arr[index])
+                document.getElementById("show").innerHTML += arr[index];
+                index++;
+            
+
+        },1000)
+
+    }
 
     </script>
 </body>
