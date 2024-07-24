@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        button{
+            margin: 40px;
+        }
+        
+    </style>
+</head>
+<body>
+    <button onclick="document.getElementById('myimage').src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFq2yL57KNsvk8PXeIPu03oQKZk4-Chd1R4g&s://img.freepik.com/free-vector/realistic-light-bulb-with-electricity_23-2149129410.jpg?size=338&ext=jpg&ga=GA1.1.2008272138.1721347200&semt=ais_user'" width="300px">Turn ON the Light</button>
+
+    <img id="myimage" src="https://i.pinimg.com/564x/e0/fd/25/e0fd25f9127a9a109a0648c83ee61643.jpg" alt="" width="300px">
+
+    <button onclick="document.getElementById('myimage').src='https://i.pinimg.com/564x/e0/fd/25/e0fd25f9127a9a109a0648c83ee61643.jpg'">Turn OFF the Light</button>
+</body>
+</html>
