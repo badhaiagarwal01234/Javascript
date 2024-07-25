@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+            #t{
+                height: 200px;
+                width: 200px;
+                border: 2px solid black;
+            }
+            #box{
+                height: 150px;
+                width: 600px;
+                border: 2px solid black;
+                margin-top: 20px;
+            }
+    </style>
+</head>
+
+<body>
+    <textarea id="t"></textarea><br>
+        <h1>css properties</h1><br>
+        <input type="text" placeholder="color" id="color">
+        <input type="text" placeholder="background-color" id="bgc">
+        <input type="text" placeholder="font-size" id="size">
+        <div id="box"></div>
+        <p id="para">Total Letters :</p>
+
+        <script>
+          
+
+          document.querySelector("#t").oninput = function()
+          {
+            let text = document.querySelector("#t").value;
+            document.querySelector("#box").innerHTML = text;
+            let para =  document.querySelector("#t").value;
+            document.querySelector("#para").innerHTML = "Total Letters :" + para.length;
+            
+          }
+
+          
+          document.querySelector("#color").oninput = function()
+          {
+            let color =  document.querySelector("#color").value;
+            document.querySelector("#box").style.color = color;
+            
+          }
+
+          document.querySelector("#bgc").oninput = function()
+          {
+            let bgc =  document.querySelector("#bgc").value;
+            document.querySelector("#box").style.backgroundColor = bgc;
+            
+          }
+
+          document.querySelector("#bgc").oninput = function()
+          {
+            let bgc =  document.querySelector("#bgc").value;
+            document.querySelector("#box").style.backgroundColor = bgc;
+            
+          }
+    
+          document.querySelector("#size").oninput = function()
+          {
+            let size =  document.querySelector("#size").value;
+            document.querySelector("#box").style.fontSize =  size + "px";
+            
+          }
+
+       
+        </script>
+</body>
+</html>
