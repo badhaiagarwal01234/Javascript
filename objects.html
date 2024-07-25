@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let obj = {
+            id: 101,
+            fname: "John",
+            lname: "agarwal",
+            age: 30,
+            city: "New York",
+            mobile: 6393778005,
+            skills: ["c", "c++", "java", "python", "mern"],
+            fullname: function () {
+                console.log(this.fname, this.lname)
+                // console.log(this)
+            },
+            marks: {
+                physics: 85,
+                chemistry: 60,
+                maths: 100
+            }
+        }
+        // console.log(obj.fname)
+        // console.log(obj.skills)
+        // console.log(obj["fname"])   //2nd method
+        // console.log(obj.fullname())
+        // console.log(obj.marks)
+
+        //----------------------------------------------------------------------------------------------------------------------
+
+
+        let array_object = [{
+            id: 101,
+            fname: "John",
+            lname: "agarwal",
+            age: 30,
+            city: "New York",
+            mobile: 6393778005,
+            skills: ["c", "c++", "java", "python", "mern"],
+            fullname: function () {
+                console.log(this.fname, this.lname)
+                // console.log(this)
+            },
+            marks: {
+                physics: 85,
+                chemistry: 60,
+                maths: 100
+            }
+        },
+        {
+
+            id: 102,
+            fname: "badhai",
+            lname: "singhal",
+            age: 15,
+            city: "jaipur",
+            mobile: 6393778005,
+            skills: ["c", "c++", "java", "python", "mern"],
+            fullname: function () {
+                console.log(this.fname, this.lname)
+                // console.log(this)
+            },
+            marks: {
+                physics: 25,
+                chemistry: 50,
+                maths: 10
+            },
+
+        },
+
+        {
+
+            id: 103,
+            fname: "hardik",
+            lname: "agarwal",
+            age: 40,
+            city: "udaipur",
+            mobile: 6393778005,
+            skills: ["c", "c++", "java", "mern"],
+            fullname: function () {
+                console.log(this.fname, this.lname)
+                // console.log(this)
+            },
+            marks: {
+                physics: 85,
+                chemistry: 60,
+                maths: 100
+            }
+
+
+        },
+        {
+
+            id: 104,
+            fname: "badhai",
+            lname: "singhal",
+            age: 20,
+            city: "jaipur",
+            mobile: 6393778005,
+            skills: ["c", "c++", "java", "python", "mern"],
+            fullname: function () {
+                console.log(this.fname, this.lname)
+                // console.log(this)
+            },
+            marks: {
+                physics: 25,
+                chemistry: 20,
+                maths: 10
+            },
+
+         },]
+
+
+        // console.log(array_object)
+        // for (let i of array_object) {
+        //     console.log(i.id, i.fname, i.lname, i.age, i.city, i.mobile)
+        // }
+
+        // let b = array_object.filter((item)=>item.age>18);
+        // console.log(b);
+
+        let c = array_object.filter((item)=>(((item.marks.physics+item.marks.chemistry+item.marks.maths)*100)/300)>=75)
+        console.log(c)
+    </script>
+</body>
+
+</html>
