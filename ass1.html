@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .container{
+            width: 700px;
+            height: 500px;
+            border: 2px solid black;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: self-start;
+            
+        }
+        .box1{
+            height: 100px;
+            width: 100px;
+            border: 2px solid black;
+            margin: 5px;
+        }
+        .box2{
+            
+            width: 65%;
+            /* border:  2px solid black; */
+            display: flex;
+            flex-wrap: wrap;
+            
+            
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div class="container">
+            <div style ="margin-top: 30px">
+            <input type="text" placeholder="select Your color" id="a">
+            <input type="text" placeholder="select Your div" id="b">
+            <button id="button">Submit</button>
+        </div>
+
+            <div class="box2">
+
+            <div class="box1" id="1"></div>
+            <div class="box1" id="2"></div>
+            <div class="box1" id="3"></div>
+            <div class="box1" id="4"></div>
+            <div class="box1" id="5"></div>
+            <div class="box1" id="6"></div>
+            <div class="box1" id="7"></div>
+            <div class="box1" id="8"></div>
+            
+
+        </div>
+    
+    </div>
+
+    <script>
+
+        document.querySelector("#button").onclick = function(){
+            let color = document.querySelector("#a").value;
+            let div = document.querySelector("#b").value;
+
+            console.log(color,div)
+
+            let all_box = document.querySelectorAll(".box1");
+
+            for(let i of all_box){
+
+                if(i.id == div){
+                i.style.backgroundColor  = color;
+                }
+
+            }
+        }
+        
+
+    </script>
+</body>
+</html>
